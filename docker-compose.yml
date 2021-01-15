@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  node-api:
+    container_name: ucenjemean
+    restart: always
+    ports:
+      - "4100:4100"
+    image: ucenjemean
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: "npm start"
+    networks:
+      - sp-network
+
+networks:
+  sp-network:
+    name: sp-network
+    driver: bridge
