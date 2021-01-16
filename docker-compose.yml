@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   node-api:
-    container_name: ucenjemean
+    container_name: ucenjemean-app
     restart: always
     ports:
       - "4100:4100"
@@ -14,6 +14,14 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     command: "npm start"
+    networks:
+      - sp-network
+
+  mongo-db:
+    image: mongo
+    container_name: ucenjeMEAN-mongodb
+    ports:
+      - "27017-27019:27017-27019"
     networks:
       - sp-network
 
