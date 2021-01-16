@@ -14,7 +14,7 @@ const ctrlOstalo = require('../controllers/ostalo');
 router.get('/', ctrlMain.index);
 
 //get lokacije shit
-router.get('/lokacije', ctrlLokacije.lokacije);
+router.get('/novice', ctrlLokacije.novice);
 
 //get ostali shit
 router.get('/tutorial', ctrlOstalo.tutorial);
