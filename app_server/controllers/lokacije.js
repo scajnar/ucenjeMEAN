@@ -53,13 +53,9 @@ const podrobnostiLokacije = (req, res) => {
 const podrobnostiIzdelka = (req,res) => {
     res.render('izdelki',{
         title: 'izdelki',
-        valuteVDrzavah:{
-            ceneVAvstriji: 'euro',
-            cenaVItaliji: 'franklni',
-            cenaVAngliji: 'funti'
-        },
-        izdelki:[{
-            imeIzdelka: 'Punto',
+
+        izdelek:{
+            imeIzdelka: 'Gunto',
             barve:{
                 rdeca: true,
                 modra: false,
@@ -71,10 +67,21 @@ const podrobnostiIzdelka = (req,res) => {
             lastnosti:{
                 zaOtroke: true,
                 zaOdrasle: true,
-                oznake: ['zabavno','hitro','nenormalno']
+                oznake: ['bavno','tro','normalno']
+            },
+            modifikatorCene:{
+                anglijaX:2,
+                italijaX:1.5,
+                Avstrija:1
             }
 
-        }]
+        },
+
+        valuteVDrzavah:{
+            ceneVAvstriji: 'euro',
+            cenaVItaliji: 'franklni',
+            cenaVAngliji: 'funti'
+        }
 
 
     })

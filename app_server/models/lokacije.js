@@ -31,7 +31,7 @@ const izdelkiShema = new mongoose.Schema( {
         cenaVItaliji: String,
         cenaVAngliji: String
     },
-    izdelki:[izdelkiLastnostiShema]
+    izdelek:{izdelkiLastnostiShema}
 })
 
 const izdelkiLastnostiShema = new mongoose.Schema({
@@ -48,6 +48,11 @@ const izdelkiLastnostiShema = new mongoose.Schema({
         zaOtroke: Boolean,
         zaOdrasle: Boolean,
         Oznake: [String]
+    },
+    modifikatorCene:{
+        anglijaX: Number,
+        italijaX: Number,
+        Avstrija: Number
     }
 })
 
