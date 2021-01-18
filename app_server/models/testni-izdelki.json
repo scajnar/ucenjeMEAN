@@ -1,0 +1,73 @@
+[{
+  "imeIzdelka": "Gunto",
+  "barve":{
+    "rdeca": true,
+    "modra": false,
+    "rumena": true,
+    "crna": false,
+    "bela": true
+  },
+  "cena": 200,
+  "lastnosti":{
+    "zaOtroke": true,
+    "zaOdrasle": true,
+    "oznake": [
+      "bavno",
+      "tro",
+      "normalno"
+    ]
+  },
+  "modifikatorCene":{
+    "anglijaX":2,
+    "italijaX":1.5,
+    "Avstrija":1
+  }
+},
+{
+  "imeIzdelka": "Fordimus",
+  "barve":{
+    "rdeca": true,
+    "modra": true,
+    "rumena": true,
+    "crna": true,
+    "bela": true
+  },
+  "cena": 500,
+  "lastnosti":{
+    "zaOtroke": false,
+    "zaOdrasle": true,
+    "oznake": [
+      "rdec",
+      "zabaven",
+      "formalen", "ekstravaganten"
+    ]
+  },
+  "modifikatorCene":{
+    "anglijaX":6,
+    "italijaX":0.3,
+    "Avstrija":1
+  }
+},
+  {
+    "imeIzdelka": "Gardalandisamus",
+    "barve":{
+      "rdeca": true,
+      "modra": false,
+      "rumena": false,
+      "crna": true,
+      "bela": false
+    },
+    "cena": 500,
+    "lastnosti":{
+      "zaOtroke": true,
+      "zaOdrasle": false,
+      "oznake": ["super","richkidsonly","viral", "kontroverzen", "sekularen"]
+    },
+    "modifikatorCene":{
+      "anglijaX":6,
+      "italijaX":0.3,
+      "Avstrija":1
+    }
+  }
+
+  ]

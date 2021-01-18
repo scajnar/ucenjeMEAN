@@ -74,25 +74,26 @@ const podrobnostiIzdelka = (req,res) => {
                 italijaX:1.5,
                 Avstrija:1
             }
+        }
+    })
+}
 
-        },
-
+const valuteVdrzavah = (req,res) => {
+    res.render('valute',{
+        title: 'valute',
         valuteVDrzavah:{
             ceneVAvstriji: 'euro',
             cenaVItaliji: 'franklni',
             cenaVAngliji: 'funti'
         }
-
-
     })
-
 }
-
 
 
 
 module.exports = {
     novice,
     podrobnostiLokacije,
-    podrobnostiIzdelka
+    podrobnostiIzdelka,
+    valuteVdrzavah
 }

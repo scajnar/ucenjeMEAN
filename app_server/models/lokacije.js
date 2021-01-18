@@ -57,4 +57,4 @@ const izdelkiLastnostiShema = new mongoose.Schema({
 })
 
 mongoose.model('lokacija', lokacijeShema,'lokacije');
-mongoose.model('ime-paketa-izdelkov',izdelkiShema,'izdelkiKolekcija');
+mongoose.model('ime-paketa-izdelkov',izdelkiLastnostiShema,'izdelkiKolekcija');
