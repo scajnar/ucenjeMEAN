@@ -5,8 +5,10 @@ var dbURI = 'mongodb://localhost/ucenjeDATABAZA';
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGODB_CLOUD_URI;
 } else if (process.env.NODE_ENV === 'docker') {
-    dbURI = 'mongodb://ucenjemeancluster/ucenjeDATABAZA';
+    dbURI = 'mongodb://ucenjeMEAN-mongodb/ucenjeDATABAZA';
 }
+
+
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useCreateIndex: true,
