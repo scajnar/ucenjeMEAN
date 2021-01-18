@@ -68,6 +68,27 @@
       "italijaX":0.3,
       "Avstrija":1
     }
+  },
+  {
+    "imeIzdelka": "TestusMagnifamus",
+    "barve":{
+      "rdeca": true,
+      "modra": false,
+      "rumena": false,
+      "crna": true,
+      "bela": false
+    },
+    "cena": 500,
+    "lastnosti":{
+      "zaOtroke": true,
+      "zaOdrasle": false,
+      "oznake": ["TEST","TEST123","TESTTEST"]
+    },
+    "modifikatorCene":{
+      "anglijaX":6,
+      "italijaX":0.3,
+      "Avstrija":1
+    }
   }
 
   ]

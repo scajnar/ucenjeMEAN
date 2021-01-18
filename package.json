@@ -8,9 +8,14 @@
     "lokacije-brisi": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.lokacije.remove({})'\"",
     "lokacije-prikazi": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.lokacije.find().pretty()'\"",
 
+    "podatki-izvoz-produkcija": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongodump -h localhost -d ucenjeDATABAZA -o ./\"; docker exec -it ucenjeMEAN-mongodb bash -c \"mongodb+srv://app:rusjanovtrg1@ucenjemeancluster.fjrua.mongodb.net/ucenjemeancluster?retryWrites=true&w=majority --ssl --username app --authenticationDatabase admin -d ucenjemeancluster ./ucenjeDATABAZA\"; docker exec -it ucenjeMEAN-mongodb bash -c \"rm -rf ./ucenjeDATABAZA\"",
+
     "izdelki-uvoz": "sudo docker cp ./app_server/models/testni-izdelki.json ucenjeMEAN-mongodb:/testni-izdelki.json; docker exec -it ucenjeMEAN-mongodb mongoimport --db ucenjeDATABAZA --collection izdelki --mode upsert --upsertFields naziv --jsonArray --file testni-izdelki.json; docker exec -it ucenjeMEAN-mongodb rm -rf testni-izdelki.json; docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.izdelki.find()'\"",
     "izdelki-brisi": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.izdelki.remove({})'\"",
-    "izdelki-prikazi": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.izdelki.find().pretty()'\""
+    "izdelki-prikazi": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongo ucenjeDATABAZA --eval 'db.izdelki.find().pretty()'\"",
+    "podatki1": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongodump --uri mongodb+srv://admin:rusjanovtrg1@ucenjemeancluster.fjrua.mongodb.net/ucenjeDATABAZA\"",
+    "podatki2": "sudo docker exec -it ucenjeMEAN-mongodb bash -c \"mongorestore --host ucenjemeancluster-shard-00-02.fjrua.mongodb.net:27017,ucenjemeancluster-shard-00-01.fjrua.mongodb.net:27017,ucenjemeancluster-shard-00-00.fjrua.mongodb.net:27017  --ssl --username app --authenticationDatabase admin -d ucenjeDATABAZA ./ucenjeDATABAZA\"",
+    "podatki3": "sudo  docker exec -it ucenjeMEAN-mongodb bash -c \"mongo \\\"mongodb+srv://app:rusjanovtrg1@ucenjemeancluster.fjrua.mongodb.net/ucenjemeancluster?retryWrites=true&w=majority\\\" --username app\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
