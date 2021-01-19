@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Lokacija = mongoose.model('Lokacija');
 
 const komentarjiKreiraj = (req, res) => {
     res.status(200).json({"status": "uspešno"});
@@ -23,3 +22,4 @@ module.exports = {
     komentarjiPosodobiIzbranega,
     komentarjiIzbrisiIzbranega
 };
+

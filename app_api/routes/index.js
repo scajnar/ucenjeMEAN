@@ -1,9 +1,10 @@
+
 const express = require('express');
 const router = express.Router();
 const ctrlLokacije = require('../controllers/lokacije');
 const ctrlKomentarji = require('../controllers/komentarji');
 
-/* Lokacije */
+// Lokacije
 router.get('/lokacije',
     ctrlLokacije.lokacijeSeznamPoRazdalji);
 router.post('/lokacije',
@@ -15,7 +16,7 @@ router.put('/lokacije/:idLokacije',
 router.delete('/lokacije/:idLokacije',
     ctrlLokacije.lokacijeIzbrisiIzbrano);
 
-/* Komentarji */
+// Komentarji
 router.post('/lokacije/:idLokacije/komentarji',
     ctrlKomentarji.komentarjiKreiraj);
 router.get('/lokacije/:idLokacije/komentarji/:idKomentarja',
@@ -24,5 +25,11 @@ router.put('/lokacije/:idLokacije/komentarji/:idKomentarja',
     ctrlKomentarji.komentarjiPosodobiIzbranega);
 router.delete('/lokacije/:idLokacije/komentarji/:idKomentarja',
     ctrlKomentarji.komentarjiIzbrisiIzbranega);
+
+
+
+
+
+const ctrlIzdelki = require('../controllers/izdelki');
 
 module.exports = router;

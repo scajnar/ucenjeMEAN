@@ -25,18 +25,18 @@ const lokacijeShema = new mongoose.Schema({
 });
 
 
-const izdelkiShema = new mongoose.Schema( {
-    valuteVDrzavah:{
+const izdelkiShema = new mongoose.Schema({
+    valuteVDrzavah: {
         ceneVAvstriji: String,
         cenaVItaliji: String,
         cenaVAngliji: String
     },
-    izdelek:{izdelkiLastnostiShema}
+    izdelek: {izdelkiLastnostiShema}
 })
 
 const izdelkiLastnostiShema = new mongoose.Schema({
     imeIzdelka: String,
-    barve:{
+    barve: {
         rdeca: Boolean,
         modra: Boolean,
         rumena: Boolean,
@@ -44,17 +44,17 @@ const izdelkiLastnostiShema = new mongoose.Schema({
         bela: Boolean
     },
     cena: Number,
-    lastnosti:{
+    lastnosti: {
         zaOtroke: Boolean,
         zaOdrasle: Boolean,
         Oznake: [String]
     },
-    modifikatorCene:{
+    modifikatorCene: {
         anglijaX: Number,
         italijaX: Number,
         Avstrija: Number
     }
 })
 
-mongoose.model('lokacija', lokacijeShema,'lokacije');
-mongoose.model('ime-paketa-izdelkov',izdelkiLastnostiShema,'izdelkiKolekcija');
+mongoose.model('lokacija', lokacijeShema, 'lokacije');
+mongoose.model('ime-paketa-izdelkov', izdelkiLastnostiShema, 'izdelkiKolekcija');
