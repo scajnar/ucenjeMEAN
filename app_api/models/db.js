@@ -1,15 +1,17 @@
- const mongoose = require('mongoose');
-
 var dbURI = 'mongodb://localhost/ucenjeDATABAZA';
 console.log('Tole je proccess.env.MONGODB_CLOUD_URI-->: '+ process.env.MONGODB_CLOUD_URI);
-console.log('Tole je NODE_END'+ process.env.NODE_ENV);
+console.log('Tole je NODE_ENV'+ process.env.NODE_ENV);
 console.log(process.env.MONGODB_CLOUD_URI);
+if(process.env.MONGODB_CLOUD_URI!=null){
+    process.env.NODE_ENV=production;
+}
 
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGODB_CLOUD_URI;
 } else if (process.env.NODE_ENV === 'docker') {
     dbURI = 'mongodb://ucenjeMEAN-mongodb/ucenjeDATABAZA';
 }
+const mongoose = require('mongoose');
 
 
 mongoose.connect(dbURI, {
