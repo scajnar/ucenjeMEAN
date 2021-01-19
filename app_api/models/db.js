@@ -2,6 +2,7 @@
 
 var dbURI = 'mongodb://localhost/ucenjeDATABAZA';
 console.log('Tole je proccess.env.MONGODB_CLOUD_URI-->: '+ process.env.MONGODB_CLOUD_URI);
+console.log('Tole je NODE_END'+ process.env.NODE_ENV);
 console.log(process.env.MONGODB_CLOUD_URI);
 
 if (process.env.NODE_ENV === 'production') {
