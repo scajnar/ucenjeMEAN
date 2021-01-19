@@ -1,7 +1,7 @@
  const mongoose = require('mongoose');
 
 var dbURI = 'mongodb://localhost/ucenjeDATABAZA';
- console.log('Tole je proccess.env.MONGODB_CLOUD_URI');
+console.log('Tole je proccess.env.MONGODB_CLOUD_URI-->: '+ process.env.MONGODB_CLOUD_URI);
 console.log(process.env.MONGODB_CLOUD_URI);
 
 if (process.env.NODE_ENV === 'production') {
